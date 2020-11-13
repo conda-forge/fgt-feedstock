@@ -15,3 +15,4 @@ cmake -G "Unix Makefiles" \
 # CircleCI offers two cores.
 make -j $CPU_COUNT
 make install
+make test
