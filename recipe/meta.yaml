@@ -1,18 +1,18 @@
 {% set name = "fgt" %}
-{% set version = "v0.4.8" %}
+{% set version = "0.4.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/gadomski/fgt/archive/{{ version }}.tar.gz
-  sha256: 3e5d22621582213f3f4ddc5df3da9cff55dd2b2a6ff2e4a2705bf1f1030003d6
+  url: https://github.com/gadomski/fgt/archive/v{{ version }}.tar.gz
+  sha256: 677213957dff59d6f546855663670fa7991eb69fbe9caa9312c1296c2360fcb1
   patches:
     - fgt.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
