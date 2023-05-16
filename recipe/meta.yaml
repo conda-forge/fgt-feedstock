@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/gadomski/fgt/archive/v{{ version }}.tar.gz
   sha256: 2670b6d464cadb6fcc26e81914910a233a883535311ce4d9baca08012db899ae
-  patches:
-    - fgt.patch
 
 build:
   number: 0
