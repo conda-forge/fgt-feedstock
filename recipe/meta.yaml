@@ -1,5 +1,5 @@
 {% set name = "fgt" %}
-{% set version = "0.4.8" %}
+{% set version = "0.4.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/gadomski/fgt/archive/v{{ version }}.tar.gz
-  sha256: 3e5d22621582213f3f4ddc5df3da9cff55dd2b2a6ff2e4a2705bf1f1030003d6
-  patches:
-    - fgt.patch
+  sha256: 2670b6d464cadb6fcc26e81914910a233a883535311ce4d9baca08012db899ae
 
 build:
   number: 0
@@ -20,6 +18,7 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
     - eigen
+    - make  # [unix]
     - openmpi  # [not win]
   run:
     - eigen
