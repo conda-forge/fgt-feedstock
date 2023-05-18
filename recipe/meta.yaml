@@ -18,6 +18,7 @@ requirements:
     - cmake
     - {{ compiler('cxx') }}
     - eigen
+    - make # [unix]
     - openmpi  # [not win]
   run:
     - eigen
