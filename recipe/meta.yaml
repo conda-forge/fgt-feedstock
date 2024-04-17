@@ -19,14 +19,15 @@ requirements:
     - {{ compiler('cxx') }}
     - eigen
     - make  # [unix]
-    - openmpi  # [not win]
+    - openmpi  # [unix]
   run:
     - eigen
-    - openmpi  # [not win]
+    - openmpi  # [unix]
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libfgt.a  # [not win]
+    - test -f ${PREFIX}/lib/libfgt.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libfgt.so  # [linux]
     - if not exist %LIBRARY_LIB%\\fgt.lib exit 1  # [win]
 
 about:
