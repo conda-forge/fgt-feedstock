@@ -17,6 +17,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - eigen
     - make  # [unix]
     - openmpi  # [unix]
